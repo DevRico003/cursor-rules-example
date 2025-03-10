@@ -1,0 +1,33 @@
+
+# Coding Pattern Preferences
+
+## Description
+This rule defines general coding preferences and patterns to follow for all development in this project.
+
+## Severity
+info
+
+## Message
+Follow established coding patterns and preferences for clean, maintainable code.
+
+## Explanation
+
+### General Principles
+- Always prefer simple solutions
+- Avoid duplication of code whenever possible, which means checking for other areas of the codebase that might already have similar code and functionality
+- Write code that takes into account the different environments: dev, test, and prod
+- You are careful to only make changes that are requested or you are confident are well understood and related to the change being requested
+- Keep the codebase very clean and organized
+
+### Bug Fixes and Changes
+- When fixing an issue or bug, do not introduce a new pattern or technology without first exhausting all options for the existing implementation
+- If you finally do introduce a new pattern/technology, make sure to remove the old implementation afterwards so we don't have duplicate logic
+
+### Code Organization
+- Avoid writing scripts in files if possible, especially if the script is likely only to be run once
+- Avoid having files over 200-300 lines of code. Refactor at that point.
+
+### Testing and Data
+- Mocking data is only needed for tests, never mock data for dev or prod
+- Never add stubbing or fake data patterns to code that affects the dev or prod environments
+- Never overwrite my .env file without first asking and confirming
